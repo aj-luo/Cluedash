@@ -1,0 +1,27 @@
+body {
+    background-color: #0F172A;
+    color: white;
+    font-family: system-ui;
+    margin: 40px;
+}
+
+.difficulty_button {
+    border-radius: 20%;
+    height: 60px;
+    width: 100px;
+}
+
+.difficulty_buttons {
+    margin-bottom: 20px;
+}
+
+.toplink {
+    margin: 10px;
+}
+
+/*the float property allows you to wrap words around an image, the float: left declaration puts the
+image to the left of the words*/
+#albert_photo {
+    float: left;
+    margin-right: 20px;
+}
