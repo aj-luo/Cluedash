@@ -7,8 +7,12 @@ header {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 1.78px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .cards_container {
@@ -27,6 +31,16 @@ header {
     max-width: 400px;
     display: inline-block;
     color: white;
+    letter-spacing: 1.78px;
+    text-transform: uppercase;
+}
+
+.card h2 {
+    background-color: inherit;
+}
+
+.card p {
+    background-color: inherit;
 }
 
 .card_image {
@@ -51,7 +65,7 @@ header {
 
 
 footer {
-  margin-top: 20px;
+  margin-top: 100px;
   color: white;
   text-align: center;
 }
