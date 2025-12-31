@@ -1,11 +1,8 @@
 function Footer() {
     return(
-        <>
-        <hr></hr>
         <footer>
-            <p>&copy; {new Date().getFullYear()} Cluedash</p>
+            <p>&copy; {new Date().getFullYear()} Half-Dome Studios. All rights reserved.</p>
         </footer>
-        </>
     );
 }
 

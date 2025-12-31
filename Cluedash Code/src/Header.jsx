@@ -1,11 +1,10 @@
-function Header() {
+import logo from './assets/ClueDash_logo.png'
 
+function Header() {
     return(
         <header>
-            <h1>
-                Welcome to Cluedash
-            </h1>
-            <hr></hr>
+            <img src={logo} alt="ClueDash Logo"/>
+            <p>Can you guess in time?</p>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>   
