@@ -3,16 +3,35 @@
   background-color: #0F172A;
 }
 
+
 header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
     color: white;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1.78px;
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 900;
-    font-style: normal;
+}
+
+.halfdome-logo {
+    width: 100px;
+    height: auto;
+}
+
+.lottie-container {
+    width: 530px;
+    aspect-ratio: 2 / 1;
+    margin: 0 auto
+}
+
+.lottie-container svg,
+.lottie-container canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .cards_container {
@@ -65,7 +84,45 @@ header {
 
 
 footer {
-  margin-top: 100px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 50px;
   color: white;
   text-align: center;
+  list-style: none;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer ul{
+    display: flex; 
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+.company_logos {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.social_media_icons {
+  display: flex;           
+  gap: 12px;               
+  align-items: center;     
+  justify-content: center; 
 }
