@@ -1,18 +1,21 @@
-import logo from './assets/ClueDash_logo.png'
+import logo from './assets/favicon.png'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function Header() {
     return(
         <header>
-            <img src={logo} alt="ClueDash Logo"/>
-            <p>Can you guess in time?</p>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>   
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+            <div>
+                <div className='lottie-container'>
+                <DotLottieReact
+                    src="https://lottie.host/c289557c-be7a-47d3-bb7c-26e81e1d3ca6/pV2L8Bu4IK.lottie"
+                    loop
+                    autoplay
+                />
+                </div>
+            </div>
+
+            <p>Choose your difficulty</p>
+
         </header>
     );
 }
