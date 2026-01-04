@@ -3,26 +3,43 @@
   background-color: #0F172A;
 }
 
+.app-root {
+    position: relative;       
+    min-height: 100vh;
+    padding-top: 100px;
+    background-color: #0F172A; 
+}
+
+.app-root::before {
+    content: "";                       
+    position: absolute;
+    inset: 0;                           
+    background-image: url(./assets/background_monogram.png);
+    background-repeat: repeat;
+    background-size: 800px 600px;
+    opacity: 0.25;                    
+    pointer-events: none;                                   
+}
+
+.app-root > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    color: white;
-    text-transform: uppercase;
-    font-size: 20px;
-    letter-spacing: 1.78px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
 }
 
 .halfdome-logo {
-    width: 100px;
+    width: 60px;
     height: auto;
 }
 
 .lottie-container {
-    width: 530px;
+    width: 550px;
     aspect-ratio: 2 / 1;
     margin: 0 auto
 }
@@ -34,16 +51,32 @@ header {
   object-fit: contain;
 }
 
+.Mainbody {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+}
+
 .cards_container {
     display: flex;
     justify-content: center;
     gap: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.78px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
 }
 
 .card {
-    border: 5px solid white;
+    border: 5px solid black;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px hsl(0%, 0%, 0%, 0.1);
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
     padding: 20px;
     margin: 10px;
     text-align: center;
@@ -85,8 +118,7 @@ header {
 
 footer {
   text-transform: uppercase;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 100px;
   color: white;
   text-align: center;
   list-style: none;
@@ -121,8 +153,7 @@ footer p {
 }
 
 .social_media_icons {
-  display: flex;           
-  gap: 12px;               
+  display: flex;                        
   align-items: center;     
   justify-content: center; 
 }
