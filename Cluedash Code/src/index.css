@@ -59,6 +59,8 @@ header {
     border-radius: 40px;
     box-sizing: border-box;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    min-width: 1200px;
+    max-width: 1600px;
 }
 
 .cards_container {
