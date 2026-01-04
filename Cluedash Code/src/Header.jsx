@@ -13,9 +13,6 @@ function Header() {
                 />
                 </div>
             </div>
-
-            <p>Choose your difficulty</p>
-
         </header>
     );
 }

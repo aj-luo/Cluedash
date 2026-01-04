@@ -14,17 +14,10 @@ function Footer() {
                     <a><img className="company_logos" src={youtubeIcon} alt="youtube_logo"></img></a>
                     <a><img className="company_logos" src={instagramIcon} alt="instagram_logo"></img></a>
                 </span>
-                <ul>
-                    <li><a href="#">Home</a></li>   
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <a><img className="halfdome-logo" src={halfdomeIcon} alt="halfdome_logo"></img></a>
             </div>
 
                 <p>&copy; {new Date().getFullYear()} Half-Dome Studios. All rights reserved.</p>
-                
+
         </footer>
     );
 }
