@@ -3,6 +3,7 @@ import discordIcon from './assets/discord_logo.png'
 import youtubeIcon from './assets/youtube_logo.png'
 import instagramIcon from './assets/instagram_logo.png'
 import halfdomeIcon from './assets/favicon.png'
+import List from './List/List.jsx'
 
 function Footer() {
     return(
@@ -20,7 +21,7 @@ function Footer() {
             </span>
             <p>&copy; {new Date().getFullYear()} Half-Dome Studios. All rights reserved.</p>
             </div>
-
+            <List />
             <div className="footer-right">
                 <a href="#"><img className="halfdome-logo" src={halfdomeIcon} alt="Logo" /></a>
                 <a href="#"><p>Half-Dome Studios</p></a>
