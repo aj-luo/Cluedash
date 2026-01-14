@@ -10,7 +10,7 @@ function User(props) {
     return (
         props.isLoggedIn ? welcomeMessage : welcomeMessage2
     );
-}
+} 
 User.propTypes = {
     isLoggedIn: PropTypes.bool,
     name: PropTypes.string

@@ -8,26 +8,22 @@ import List from './List/List.jsx'
 function Footer() {
     return(
         <footer>
-        <div className="footer-container">
-            
-            <div className="footer-left"></div>
-            
-            <div className="footer-center">
-            <span className="social_media_icons">
-                <a href="#"><img className="company_logos" src={xIcon} alt="x_logo" /></a>
-                <a href="#"><img className="company_logos" src={discordIcon} alt="discord_logo" /></a>
-                <a href="#"><img className="company_logos" src={youtubeIcon} alt="youtube_logo" /></a>
-                <a href="#"><img className="company_logos" src={instagramIcon} alt="instagram_logo" /></a>
-            </span>
-            <p>&copy; {new Date().getFullYear()} Half-Dome Studios. All rights reserved.</p>
+            <div className="footer-container">
+                <div className="footer-center">
+                    <List />
+                    <span className="social_media_icons">
+                        <a href="#"><img className="company_logos" src={xIcon} alt="x_logo" /></a>
+                        <a href="#"><img className="company_logos" src={discordIcon} alt="discord_logo" /></a>
+                        <a href="#"><img className="company_logos" src={youtubeIcon} alt="youtube_logo" /></a>
+                        <a href="#"><img className="company_logos" src={instagramIcon} alt="instagram_logo" /></a>
+                    </span>
+                    <p id="copyright">&copy; {new Date().getFullYear()} Half-Dome Studios. All rights reserved.</p>
+                </div>
+                <div className="footer-right">
+                    <a href="#"><img className="halfdome-logo" src={halfdomeIcon} alt="Logo" /></a>
+                    <a href="#"><p>Half-Dome Studios</p></a>
+                </div>
             </div>
-            <List />
-            <div className="footer-right">
-                <a href="#"><img className="halfdome-logo" src={halfdomeIcon} alt="Logo" /></a>
-                <a href="#"><p>Half-Dome Studios</p></a>
-            </div>
-
-        </div>
         </footer>
     );
 }
