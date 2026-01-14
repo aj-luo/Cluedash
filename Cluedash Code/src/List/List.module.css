@@ -1,0 +1,9 @@
+.list {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    color: white;
+}
