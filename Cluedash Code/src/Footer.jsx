@@ -21,7 +21,7 @@ function Footer() {
                 </div>
                 <div className="footer-right">
                     <a href="#"><img className="halfdome-logo" src={halfdomeIcon} alt="Logo" /></a>
-                    <a href="www.halfdomestudios.com"><p>Half-Dome Studios</p></a>
+                    <a href="www.halfdomestudios.com"></a>
                 </div>
             </div>
         </footer>
