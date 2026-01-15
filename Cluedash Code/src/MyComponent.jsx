@@ -9,6 +9,8 @@ function MyComponent() {
 
     const [age2, setAge2] = useState(0);
 
+    const [number, setnumber] = useState(0);
+
     const updateName = () => {
         setName("Spongebob Squarepants");
     }
@@ -25,7 +27,14 @@ function MyComponent() {
         setAge2(event.target.value);
     }
 
-    return (
+    function increment() {
+        /*we do setnumber(n => n + 1); because this allows us to update the previous value, so below code updates number 3 times in a row, 0 + 1, 1 + 1, 2 + 1 = 3*/
+        setnumber(n => n + 1);
+        setnumber(n => n + 1);
+        setnumber(n => n + 1);
+    }
+
+    return (  
         <div>
             <p>Name: {name}</p>
             <button onClick={updateName}>Set Name</button>
@@ -38,6 +47,9 @@ function MyComponent() {
 
             <input value={age2} onChange={handleQuantityChange} type="number"/>
             <p>Age: {age2}</p>
+
+            <p>Update number</p>
+            <button onClick={increment}>Click me</button>
 
         </div>
     );
