@@ -5,11 +5,13 @@ import User from "./Student/Student.jsx";
 
 function Mainbody() {
     return (
+        <div className="app-root">
         <div className="Mainbody">
             <Header />
             <User isLoggedIn={false} name="Albert"/>
             <Card />
             <Footer />
+        </div>
         </div>
     );
 }

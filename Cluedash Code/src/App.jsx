@@ -1,11 +1,22 @@
-import Mainbody from './Mainbody.jsx';
+import Mainbody from './Mainbody.jsx'
+import MainbodyFrench from './MainBodyFrench/MainBodyFrench.jsx'
+import Easy from './Easy/Easy.jsx'
+import Medium from './Medium/Medium.jsx'
+import Hard from './Hard/Hard.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
-    return (
-      <div className="app-root">
-        <Mainbody/>
-      </div>
-    );
+  return (
+    <BrowserRouter>
+        <Routes>
+          <Route path="/en" element={<Mainbody />} />
+          <Route path="/fr" element={<MainbodyFrench />} />
+          <Route path="/easy" element={<Easy />} />
+          <Route path="/medium" element={<Medium />} />
+          <Route path="/hard" element={<Hard />} />
+        </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App

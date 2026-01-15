@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+.app-root {
+    position: relative;       
+    min-height: 100vh;
+    padding-top: 100px;
+    background-color: #0F172A; 
+}
+
+.app-root::before {
+    content: "";                       
+    position: absolute;
+    inset: 0;                           
+    background-image: url(./assets/background_monogram.png);
+    background-repeat: repeat;
+    background-size: 800px 600px;
+    opacity: 0.25;                    
+    pointer-events: none;                                   
+}
+
+.app-root > * {
+    position: relative;
+    z-index: 1;
+}
+
+.Mainbody {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    min-width: 1200px;
+    max-width: 1600px;
+    background-color: #0F172A;;
+}
