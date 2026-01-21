@@ -1,8 +1,10 @@
 .approot {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
     position: relative;       
     min-height: 100vh;
-    padding-top: 100px;
-    background-color: hsl(0, 98%, 63%); 
+    background-color: hsl(0, 98%, 63%);
 }
 
 .approot::before {
