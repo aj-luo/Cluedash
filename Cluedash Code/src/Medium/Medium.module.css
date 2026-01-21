@@ -1,7 +1,9 @@
 .approot {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
     position: relative;       
     min-height: 100vh;
-    padding-top: 100px;
     background-color: hsl(61, 100%, 71%); 
 }
 

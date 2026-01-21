@@ -1,0 +1,23 @@
+.block {
+    width: 60vw;
+    height: 80vh;
+    margin: 0 auto;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 0px 0px white, 0px 3px 0px 0px white;
+    min-width: 400px;
+    max-width: 1400px;
+}
+
+.easy {
+    background-color: hsl(108, 80%, 67%);
+}
+
+.medium {
+    background-color: hsl(61, 100%, 71%);
+}
+
+.hard {
+    background-color: hsl(0, 98%, 63%);
+}
