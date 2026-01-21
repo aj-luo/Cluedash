@@ -3,9 +3,11 @@ body {
 }
 
 .app-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;       
     min-height: 100vh;
-    padding-top: 100px;
     background-color: #0F172A; 
 }
 
@@ -50,15 +52,17 @@ header {
 }
 
 .Mainbody {
-    width: 90%;
+    width: 60vw;
+    height: 80vh;
     margin: 0 auto;
     border: 5px solid rgba(0, 0, 0, 0.5);
     border-radius: 2rem;
     box-sizing: border-box;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
-    min-width: 1000px;
-    max-width: 1400px;
-    background-color: #0F172A;;
+    min-width: 700px;
+    max-width: 2000px;
+    max-height: 1200px;
+    background-color: #0F172A;
 }
 
 .cards_container {
