@@ -2,7 +2,6 @@ import xIcon from './assets/x_logo.png'
 import discordIcon from './assets/discord_logo.png'
 import youtubeIcon from './assets/youtube_logo.png'
 import instagramIcon from './assets/instagram_logo.png'
-import halfdomeIcon from './assets/favicon.png'
 import List from './List/List.jsx'
 
 function Footer() {
@@ -18,10 +17,6 @@ function Footer() {
                         <a href="#"><img className="company_logos" src={instagramIcon} alt="instagram_logo" /></a>
                     </span>
                     <p id="copyright">&copy; {new Date().getFullYear()} Half-Dome Studios. All rights reserved.</p>
-                </div>
-                <div className="footer-right">
-                    <a href="#"><img className="halfdome-logo" src={halfdomeIcon} alt="Logo" /></a>
-                    <a href="www.halfdomestudios.com"></a>
                 </div>
             </div>
         </footer>

@@ -6,4 +6,8 @@
     font-family: "Nunito", sans-serif;
     font-weight: 900;
     color: white;
+
+    /* ADD THESE TWO LINES SO THAT THE FLEX BOX DOES NOT STAY IN ONE LINE EVEN WHEN IT SHRINKS */
+    flex-wrap: wrap;       
+    justify-content: center; 
 }
