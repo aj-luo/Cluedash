@@ -3,6 +3,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import User from "../Student/Student.jsx";
 import Footer from '../Footer/Footer.jsx';
 import Logo from '../assets/favicon.png';
+import Card from '../Card/Card.jsx';
 
 function Platform({type}) {
     const className = `${styles.block} ${type === "easy" ? styles.easy : type === "medium" ? styles.medium : styles.hard}`;
@@ -16,7 +17,7 @@ function Platform({type}) {
                     autoplay/>
                 </div>
                 <div className={styles.item_2}><User isLoggedIn={false} name="Albert"/></div>
-                <div className={styles.item_3}><div className={styles.cards}></div></div>
+                <div className={styles.item_3}><Card /></div>
                 <div className={styles.item_4}><Footer /></div>
                 <div className={styles.item_5}><img className={styles.logo} src={Logo} alt="Half-Dome Studios Logo" /></div>
             </div>
