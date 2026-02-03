@@ -16,7 +16,7 @@ function List() {
 
     return (
         <ul className={styles.list}>
-            <a href="#"><li>TERMS OF SERVICE</li></a>
+            <a href="#"><li>T.O.S.</li></a>
             <li>|</li>
             <a href="#"><li>PRIVACY</li></a>
             <li>|</li>

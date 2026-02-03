@@ -169,23 +169,7 @@ footer {
     align-items: center;
 }
 
-.halfdome-logo {
-    width: 80px;           
-    height: auto;
-}
 
-.footer-right {
-    position: absolute;       
-    right: 20px;              
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-right p {             
-    font-size: 16px;  
-    font-weight: bold;       
-}
 
 footer ul{
     display: flex; 

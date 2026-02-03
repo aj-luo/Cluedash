@@ -23,3 +23,57 @@
 .hard {
     background-color: hsl(0, 98%, 63%);
 }
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+.item_1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.item_2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.item_3 {
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+
+.item_4 {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.item_5 {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 40%;
+    height: auto;
+    opacity: 0.5;
+}
+
