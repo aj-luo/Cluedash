@@ -48,20 +48,20 @@ function Card() {
 
     return (
         <div className={styles.card_container}>
-            <div className={styles.easycard}>
+            <div className={`${styles.easycard} ${styles.card}`}>
                 <img className={styles.emoji} src={easycard} alt="easy emoji" />
                 <h1>EASY</h1>
-                <p>Guess Under 6 Minutes</p>
+                <p>15 questions</p>
             </div>
-            <div className={styles.mediumcard}>
+            <div className={`${styles.mediumcard} ${styles.card}`}>
                 <img className={styles.emoji} src={mediumcard} alt="medium emoji" />
                 <h1>MEDIUM</h1>
-                <p>Guess Under 4 Minutes</p>
+                <p>10 questions</p>
             </div>
-            <div className={styles.hardcard}>
+            <div className={`${styles.hardcard} ${styles.card}`}>
                 <img className={styles.emoji} src={hardcard} alt="hard emoji" />
                 <h1>HARD</h1>
-                <p>Guess Under 2 Minutes</p>
+                <p>5 questions</p>
             </div>
         </div>
       );
