@@ -11,24 +11,47 @@
     grid-column-start: 1;
     grid-column-end: 2;
     background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mediumcard {
     grid-column-start: 2;
     grid-column-end: 3;
     background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hardcard {
     grid-column-start: 3;
     grid-column-end: 4;
     background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: transparent;
+    letter-spacing: 1.78px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    color: gray;
+    border: 5px solid black;
+    border-radius: 1.25rem;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    text-transform: uppercase;
 }
 
 .emoji {
     width: 100%;
     height: auto;
-    max-width: 300px;
     margin: 0 auto;
 }
 

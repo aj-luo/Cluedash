@@ -9,7 +9,7 @@
     min-width: 700px;
     max-width: 2000px;
     max-height: 1200px;
-    min-height: 500px;
+    min-height: 800px;
 }
 
 .easy {
@@ -57,8 +57,8 @@
 .item_4 {
     grid-row-start: 6;
     grid-row-end: 7;
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 7;
 }
 
 .item_5 {
