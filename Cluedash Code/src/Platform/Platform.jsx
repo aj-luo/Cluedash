@@ -3,6 +3,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import User from "../Student/Student.jsx";
 import Footer from '../Footer/Footer.jsx';
 import Logo from '../assets/favicon.png';
+import Language from '../assets/language.webp'
 import Card from '../Card/Card.jsx';
 
 function Platform({type}) {
