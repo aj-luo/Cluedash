@@ -1,10 +1,10 @@
 import styles from './Easy.module.css';
-import Platform from '../Platform/Platform.jsx'
+import Float from '../Float/Float.jsx'
 
 function Easy() {
     return (
         <div className={styles.approot}>
-            <Platform type='easy'/>
+            <Float type="easy"/>
         </div>
     )
 }

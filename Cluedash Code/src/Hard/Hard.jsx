@@ -1,10 +1,10 @@
 import style from './Hard.module.css';
-import Platform from '../Platform/Platform';
+import Float from '../Float/Float.jsx'
 
 function Hard() {
     return (
         <div className={style.approot}>
-            <Platform type='hard'/>
+            <Float type="hard"/>
         </div>
     )
 }

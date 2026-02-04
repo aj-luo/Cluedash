@@ -1,17 +1,9 @@
-import Card from "./Card.jsx";
-import Footer from "./Footer.jsx";
-import Header from "./Header.jsx";
-import User from "./Student/Student.jsx";
+import Platform from "./Platform/Platform";
 
 function Mainbody() {
     return (
         <div className="app-root">
-            <div className="Mainbody">
-                <Header />
-                <User isLoggedIn={false} name="Albert"/>
-                <Card />
-                <Footer />
-            </div>
+            <Platform />
         </div>
     );
 }
