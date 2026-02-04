@@ -1,10 +1,10 @@
 import style from './Medium.module.css';
-import Platform from '../Platform/Platform';
+import Float from '../Float/Float.jsx'
 
 function Medium() {
     return (
         <div className={style.approot}>
-            <Platform type='medium'/>
+            <Float type="medium"/>
         </div>
     )
 }

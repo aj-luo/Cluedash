@@ -1,27 +1,16 @@
 .block {
+    background-color: #0F172A;
     width: 60vw;
     height: 80vh;
     margin: 0 auto;
-    border: 5px solid rgba(0, 0, 0, 0.5);
-    border-radius: 2rem;
+    border: 6px rgba(3, 3, 3, 0.15) solid;
+    border-radius: 20px;
     box-sizing: border-box;
-    box-shadow: inset 0px 2px 0px 0px white, 0px 3px 0px 0px white;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
     min-width: 700px;
     max-width: 2000px;
     max-height: 1200px;
     min-height: 800px;
-}
-
-.easy {
-    background-color: hsl(108, 80%, 67%);
-}
-
-.medium {
-    background-color: hsl(61, 100%, 71%);
-}
-
-.hard {
-    background-color: hsl(0, 98%, 63%);
 }
 
 .container {

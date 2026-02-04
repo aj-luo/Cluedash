@@ -27,6 +27,17 @@ footer ul{
     font-size: 20px;
 }
 
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    margin-top: 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
 .copyright {
     font-size: 13px;
     margin-top: 10px;

@@ -40,14 +40,23 @@
 .card {
     background-color: transparent;
     letter-spacing: 1.78px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
     color: gray;
     border: 5px solid black;
     border-radius: 1.25rem;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
     text-transform: uppercase;
+    transition: background-color 1.5s ease 1s;
 }
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card * {
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+}
+
 
 .emoji {
     width: 100%;
@@ -55,38 +64,43 @@
     margin: 0 auto;
 }
 
-.easy_card {
+.easycard {
     transition: color 0.2s ease 0.1s;
 }
 
-.medium_card {
+.mediumcard {
     transition: color 0.2s ease 0.1s; 
 }
 
-.hard_card {
+.hardcard {
     transition: color 0.2s ease 0.1s;
 }
 
-.easy_card:hover {
+.easycard:hover {
     color: hsl(108, 93%, 72%);
 }
 
-.medium_card:hover {
+.mediumcard:hover {
     color: hsl(61, 100%, 71%);
 }
 
-.hard_card:hover {
+.hardcard:hover {
     color: hsl(0, 98%, 63%);
 }
 
-.easy_card:hover .emoji {
+.easycard:hover .emoji {
     content: url(../assets/smiley_emoji.gif);
 }
 
-.medium_card:hover .emoji {
+.mediumcard:hover .emoji {
     content: url(../assets/thinking_emoji.gif);
 }
 
-.hard_card:hover .emoji {
+.hardcard:hover .emoji {
     content: url(../assets/demon_emoji.gif);
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit; /* prevents blue link text */
 }
