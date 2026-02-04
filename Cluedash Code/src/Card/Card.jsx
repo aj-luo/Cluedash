@@ -52,7 +52,7 @@ function Card() {
             <div className={`${styles.easycard} ${styles.card}`} onMouseEnter={() => playHoverSound(hoverEasy)}
           onMouseLeave={() => stopHoverSound(hoverEasy)}>
                 <img className={styles.emoji} src={easycard} alt="easy emoji" />
-                <h1>EASY</h1>
+                <h2>EASY</h2>
                 <p>6 minutes</p>
             </div>
             </Link>
@@ -60,7 +60,7 @@ function Card() {
             <div className={`${styles.mediumcard} ${styles.card}`} onMouseEnter={() => playHoverSound(hoverMedium)}
           onMouseLeave={() => stopHoverSound(hoverMedium)}>
                 <img className={styles.emoji} src={mediumcard} alt="medium emoji" />
-                <h1>NORMAL</h1>
+                <h2>NORMAL</h2>
                 <p>4 minutes</p>
             </div>
             </Link>
@@ -68,7 +68,7 @@ function Card() {
             <div className={`${styles.hardcard} ${styles.card}`} onMouseEnter={() => playHoverSound(hoverHard)}
           onMouseLeave={() => stopHoverSound(hoverHard)}>
                 <img className={styles.emoji} src={hardcard} alt="hard emoji" />
-                <h1>HARD</h1>
+                <h2>HARD</h2>
                 <p>2 minutes</p>
             </div>
             </Link>
