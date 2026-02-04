@@ -53,7 +53,7 @@ function Card() {
           onMouseLeave={() => stopHoverSound(hoverEasy)}>
                 <img className={styles.emoji} src={easycard} alt="easy emoji" />
                 <h2>EASY</h2>
-                <p>6 minutes</p>
+                <p>20 questions</p>
             </div>
             </Link>
             <Link to="/medium" className={styles.cardLink}>
@@ -61,7 +61,7 @@ function Card() {
           onMouseLeave={() => stopHoverSound(hoverMedium)}>
                 <img className={styles.emoji} src={mediumcard} alt="medium emoji" />
                 <h2>NORMAL</h2>
-                <p>4 minutes</p>
+                <p>15 questions</p>
             </div>
             </Link>
             <Link to="/hard" className={styles.cardLink}>
@@ -69,7 +69,7 @@ function Card() {
           onMouseLeave={() => stopHoverSound(hoverHard)}>
                 <img className={styles.emoji} src={hardcard} alt="hard emoji" />
                 <h2>HARD</h2>
-                <p>2 minutes</p>
+                <p>10 questions</p>
             </div>
             </Link>
         </div>

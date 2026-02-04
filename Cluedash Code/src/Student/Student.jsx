@@ -5,7 +5,7 @@ function User(props) {
 
     const welcomeMessage = <h2 className={styles.intro}> WELCOME {props.name}! CHOOSE YOUR LEVEL</h2>
 
-    const welcomeMessage2 = <h2 className={styles.intro}> WELCOME GUEST! CHOOSE A LEVEL</h2>
+    const welcomeMessage2 = <h2 className={styles.intro}> WELCOME GUEST! CHOOSE DIFFICULTY</h2>
 
     return (
         props.isLoggedIn ? welcomeMessage : welcomeMessage2
