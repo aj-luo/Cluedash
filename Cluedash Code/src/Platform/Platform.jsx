@@ -7,7 +7,7 @@ import Language from '../assets/language.webp'
 import Card from '../Card/Card.jsx';
 
 function Platform({type}) {
-    const className = `${styles.block} ${type === "easy" ? styles.easy : type === "medium" ? styles.medium : styles.hard}`;
+    const className = `${styles.block}`;
     return (
         <div className={className}>
             <div className={styles.container}>

@@ -1,4 +1,5 @@
 import styles from './List.module.css';
+import { Link } from "react-router-dom";
 
 function List() {
     /*
@@ -22,7 +23,7 @@ function List() {
             <li>|</li>
             <a href="#"><li>ASSETS</li></a>
             <li>|</li>
-            <a href="#"><li>INSTRUCTIONS</li></a>
+            <Link to="/instructions"><li>INSTRUCTIONS</li></Link>
             <li>|</li>
             <a href="#"><li>CONTACT</li></a>
         </ul>
