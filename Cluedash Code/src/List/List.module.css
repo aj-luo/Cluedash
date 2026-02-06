@@ -6,8 +6,102 @@
     font-family: "Nunito", sans-serif;
     font-weight: 900;
     color: white;
-
-    /* ADD THESE TWO LINES SO THAT THE FLEX BOX DOES NOT STAY IN ONE LINE EVEN WHEN IT SHRINKS */
     flex-wrap: wrap;       
     justify-content: center; 
+    opacity: 0.5;
 }
+
+/* Note: Body styles cannot be inside a CSS module easily. 
+  Keep active-modal in a global CSS file, or style.css,
+  NOT List.module.css
+*/
+
+.modal, .overlay {
+    text-transform: uppercase;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1000; /* Added to ensure it sits on top */
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modalContent {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: white;
+    opacity: 1;
+    padding: 14px 28px;
+    border-radius: 20px;
+    max-width: 600px;
+    min-width: 300px;
+    color: black; /* Ensure text is visible */
+    z-index: 1001; /* Higher than overlay */
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 70%;
+    margin-top: 10vh;
+    max-height: 1100px;
+}
+
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: rgb(26, 23, 23);
+    transition: background-color 1.5s ease 1s;
+    cursor: pointer;
+    border: 2px solid rgba(15, 12, 12, 0.1);
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+}
+
+
+.closeModal:hover {
+    background-color: rgba(53, 49, 49, 0.849);
+}
+
+.closeIcon {
+    width: 20px;
+    height: 25px;
+}
+
+.sendButton {
+    margin-top: 30px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 10px; /* Adds space between inputs */
+    width: 100%; /* Makes container full width */
+}
+
+.inputField {
+    padding: 10px;
+    width: 100%; /* Makes inputs fill the container width */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    border-radius: 10px;
+}
+
+.sendButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
