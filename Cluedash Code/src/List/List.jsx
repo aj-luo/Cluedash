@@ -49,15 +49,17 @@ function List() {
           <div className={styles.overlay}></div>
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <h2>Contact Us</h2>
+            <form className={styles.form} action="https://formspree.io/f/xaqdyelz" method="POST">
             <div className={styles.inputContainer}>
-            <input type="text" placeholder="Name" className={styles.inputField} required/>
-            <input type="text" placeholder="Email" className={styles.inputField} required/>
-            <textarea className={`${styles.inputField} ${styles.messageField}`} placeholder="Message" required></textarea>
-            </div>
-            <button className={styles.closeModal} onClick={toggleModal}>
-              <img className={styles.closeIcon}  src={x_icon} alt="Close" />
-            </button>
-            <button className={styles.sendButton}>SEND</button>
+              <input type="text" placeholder="Name" name="name" className={styles.inputField} required/>
+              <input type="email" placeholder="Email" name="email" className={styles.inputField} required/>
+              <textarea className={`${styles.inputField} ${styles.messageField}`} placeholder="Message" name="message" required></textarea>
+              </div>
+              <button className={styles.closeModal} onClick={toggleModal}>
+                <img className={styles.closeIcon}  src={x_icon} alt="Close" />
+              </button>
+              <button type="submit" className={styles.sendButton}>SEND</button>
+            </form>
           </div>
         </div>
       )}
