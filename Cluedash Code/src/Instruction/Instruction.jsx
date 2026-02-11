@@ -1,6 +1,7 @@
 import styles from './Instruction.module.css';
 import infinite from '../assets/infinite.png';
 import sad from '../assets/sad_face.png';
+import home from '../assets/home.png'
 import youtube from '../assets/youtube_logo.png';
 import question from '../assets/question.png';
 import yes_no from '../assets/yes_or_no.png';
@@ -13,11 +14,11 @@ function Instruction() {
         <div className= {styles.approot}>
             <div className={styles.block}>
                 <div className={styles.container}>
-                    <div className={styles.homeButton}><Link to="/en"><button className={styles.Buttons}>Home</button></Link></div>
+                    <div className={styles.homeButton}><Link to="/en"><button className={styles.Buttons}><img src={home} width="30" height="30"></img> <h4>Home</h4> </button></Link></div>
                     <div className={styles.title}>
                         <h1>Instructions</h1>
                     </div>
-                    <div className={styles.videoButton}><a href="https://www.youtube.com/watch?v=ujriV3vkC9w&list=RDujriV3vkC9w&start_radio=1"><button className={styles.Buttons}>Link to Video instructions</button></a></div>
+                    <div className={styles.videoButton}><a href="https://www.youtube.com/watch?v=ujriV3vkC9w&list=RDujriV3vkC9w&start_radio=1" target="_blank"><button className={styles.Buttons}> <img src={youtube} width="40" height="30"></img> <h4>Tutorial</h4></button></a></div>
                     <div className={styles.content}>
                         <div className={styles.steps}>
                             <div className={styles.instruction_box}>
@@ -29,7 +30,7 @@ function Instruction() {
                                 <img width="60" height="50" src={yes_no}></img>
                             </div>
                             <div className={styles.instruction_box}>
-                                <p>Unlimited guesses before last question!</p>
+                                <p>Take all the time you need!</p>
                                 <img width="60" height="50" src={infinite}></img>
                             </div>
                             <div className={styles.instruction_box}>

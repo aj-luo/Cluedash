@@ -1,7 +1,6 @@
 footer {
   text-transform: uppercase;
   color: white;
-  opacity: 0.5;
 }
 
 .footer_container {
@@ -41,12 +40,14 @@ footer p {
 .copyright {
     font-size: 13px;
     margin-top: 10px;
+    opacity: 0.5;
 }
 
 .company_logos {
     width: 40px;
     height: auto;
     margin: 0 10px;
+    opacity: 0.5;
 }
 
 .social_media_icons {
