@@ -1,4 +1,5 @@
 import styles from './Float.module.css';
+import React, { useEffect } from 'react';
 
 function Float({type}) {
 const className = `${styles.block} ${type === "easy" ? styles.easy : type === "medium" ? styles.medium : styles.hard}`;
