@@ -1,5 +1,5 @@
 import styles from './Easygame.module.css'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Easygame() {
 
@@ -23,6 +23,7 @@ function Easygame() {
                 <input placeholder='Type your question here' value={currentQuestion}
                         onChange={(e) => setcurrentQuestion(e.target.value)}></input>
                 <button onClick={handleGuessSubmit}>SUBMIT</button>
+                <button>GIVE UP</button>
             </div>
 
             <div className={styles.questionlist}>

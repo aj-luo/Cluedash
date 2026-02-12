@@ -1,5 +1,5 @@
 import styles from './Easy.module.css';
-import Float from '../Float/Float.jsx'
+import Float from '../Float/Float.jsx';
 
 function Easy() {
     return (
