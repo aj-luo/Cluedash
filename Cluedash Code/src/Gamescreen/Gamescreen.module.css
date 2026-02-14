@@ -1,0 +1,293 @@
+.easy_approot {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    position: relative;       
+    min-height: 100vh;
+    background-color: hsl(108, 80%, 67%); 
+}
+
+.easy_approot::before {
+    content: "";                       
+    position: absolute;
+    inset: 0;                           
+    background-image: url(../assets/background_monogram.png);
+    background-repeat: repeat;
+    background-size: 800px 600px;
+    opacity: 0.25;                    
+    pointer-events: none;                                   
+}
+
+.easy_approot > * {
+    position: relative;
+    z-index: 1;
+}
+
+.medium_approot {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    position: relative;       
+    min-height: 100vh;
+    background-color: hsl(61, 100%, 71%); 
+}
+
+.medium_approot::before {
+    content: "";                       
+    position: absolute;
+    inset: 0;                           
+    background-image: url(../assets/background_monogram.png);
+    background-repeat: repeat;
+    background-size: 800px 600px;
+    opacity: 0.25;                    
+    pointer-events: none;                                   
+}
+
+.medium_approot > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hard_approot {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    position: relative;       
+    min-height: 100vh;
+    background-color: hsl(0, 98%, 63%); 
+}
+
+.hard_approot::before {
+    content: "";                       
+    position: absolute;
+    inset: 0;                           
+    background-image: url(../assets/background_monogram.png);
+    background-repeat: repeat;
+    background-size: 800px 600px;
+    opacity: 0.25;                    
+    pointer-events: none;                                   
+}
+
+.hard_approot > * {
+    position: relative;
+    z-index: 1;
+}
+
+.easyblock {
+    background-color: hsl(108, 80%, 67%);
+    width: 60vw;
+    height: 80vh;
+    margin: 0 auto;
+    border: 6px rgba(3, 3, 3, 0.15) solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    min-width: 400px;
+    max-width: 2000px;
+    max-height: 1200px;
+    min-height: 800px;
+    color: white;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
+}
+
+.mediumblock {
+    background-color: hsl(61, 100%, 71%);
+    width: 60vw;
+    height: 80vh;
+    margin: 0 auto;
+    border: 6px rgba(3, 3, 3, 0.15) solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    min-width: 400px;
+    max-width: 2000px;
+    max-height: 1200px;
+    min-height: 800px;
+    color: white;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
+}
+
+.hardblock {
+    background-color: hsl(0, 98%, 63%);
+    width: 60vw;
+    height: 80vh;
+    margin: 0 auto;
+    border: 6px rgba(3, 3, 3, 0.15) solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    min-width: 400px;
+    max-width: 2000px;
+    max-height: 1200px;
+    min-height: 800px;
+    color: white;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
+}
+
+.row_one {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.row_two {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.row_three {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+.question {
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;
+}
+
+.guess {
+    text-align: center;
+    margin-top: 100px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.questionlist {
+    border-color: black;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.homeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+.input {
+    height: 40px;
+    width: 80%;
+    border-radius: 20px;
+    border: 2px rgba(3, 3, 3, 0.15) solid;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+
+.submitButton {
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    border: 2px rgba(3, 3, 3, 0.15) solid;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    background-color: transparent;
+    margin-left: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
+}
+
+.submitButton:hover {
+    background-color: hsl(108, 52%, 48%);
+}
+
+.forfeitButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px rgba(3, 3, 3, 0.15) solid;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
+}
+
+.forfeitButton:hover {
+    background-color: hsl(108, 52%, 48%);
+}
+
+.homeButton {
+    height: 30px;
+    width: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 3px rgba(3, 3, 3, 0.15) solid;
+    border-radius: 30px;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+    background-color: hsl(108, 52%, 48%);
+}
+
+.question_list {
+    list-style-type: none;
+}
+
+

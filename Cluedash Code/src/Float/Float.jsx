@@ -1,4 +1,5 @@
 import styles from './Float.module.css';
+import StartButton from '../StartButton/StartButton';
 import React, { useEffect } from 'react';
 
 function Float({type}) {
@@ -8,32 +9,27 @@ const className = `${styles.block} ${type === "easy" ? styles.easy : type === "m
 let title_text;
 let guesses;
 let button_color;
-let link;
 
     switch (type) {
         case "easy":
             title_text = "Easy";
             guesses = 20;
             button_color = styles.easybutton;
-            link = "easygame"
             break;
         case "medium":
             title_text = "Medium";
             guesses = 15;
             button_color = styles.mediumbutton;
-            link = "mediumgame"
             break;
         case "hard":
             title_text = "Hard";
             guesses = 10;
             button_color = styles.hardbutton;
-            link = "hardgame"
             break;
         default:
             title_text = "Easy";
             guesses = 20;
             button_color = styles.easybutton;
-            link = "easygame";
     }   
 
  return (
@@ -52,8 +48,8 @@ let link;
                     <li>If you are ready, press start below!</li>
                 </ul>
             </div>
-            <div className={styles.button}>
-                <a href={`/${link}`}><button className={button_color}>Start!</button></a>
+            <div className={styles.startButton}>
+            <StartButton difficulty={type}/>
             </div>
         </div>
     </div>

@@ -2,7 +2,6 @@
   "name": "cluedash",
   "private": true,
   "version": "0.0.0",
-  "proxy": "http://localhost:8888",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +11,7 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.17.12",
+    "framer-motion": "^12.34.0",
     "prop-types": "^15.8.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
