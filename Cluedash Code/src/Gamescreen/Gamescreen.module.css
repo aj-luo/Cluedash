@@ -23,6 +23,14 @@
     z-index: 1;
 }
 
+.easy {
+    transition: background-color 0.3s ease;
+}
+
+.easy:hover {
+    background-color: hsl(108, 52%, 48%);
+}
+
 .medium_approot {
     display: flex;
     justify-content: center;
@@ -48,6 +56,14 @@
     z-index: 1;
 }
 
+.medium {
+    transition: background-color 0.3s ease;
+}
+
+.medium:hover {
+    background-color: hsl(61, 58%, 47%);
+}
+
 .hard_approot {
     display: flex;
     justify-content: center;
@@ -71,6 +87,14 @@
 .hard_approot > * {
     position: relative;
     z-index: 1;
+}
+
+.hard {
+    transition: background-color 0.3s ease;
+}
+
+.hard:hover {
+    background-color: rgba(177, 29, 29, 0.774);
 }
 
 .easyblock {
@@ -239,12 +263,7 @@
     font-weight: 900;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
-}
-
-.submitButton:hover {
-    background-color: hsl(108, 52%, 48%);
 }
 
 .forfeitButton {
@@ -257,7 +276,6 @@
     font-weight: 900;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     height: 40px;
     border-radius: 20px;
     background-color: transparent;
@@ -266,9 +284,6 @@
     text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
 }
 
-.forfeitButton:hover {
-    background-color: hsl(108, 52%, 48%);
-}
 
 .homeButton {
     height: 30px;
@@ -279,15 +294,50 @@
     border: 3px rgba(3, 3, 3, 0.15) solid;
     border-radius: 30px;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
-    transition: background-color 0.3s ease;
 }
 
-.homeButton:hover {
-    background-color: hsl(108, 52%, 48%);
+.questionhistory {
+    max-width: 100%; 
+    /*tells it to shrink if children are too big */
+    overflow-x: hidden; 
+    
+    /*sets a fixed height (from previous step) */
+    height: 300px;
+    overflow-y: auto;
 }
 
 .question_list {
     list-style-type: none;
+    border: 6px rgba(3, 3, 3, 0.15) solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    height: 200px;
+    max-width: 100%; 
+    overflow-y: auto;
+    flex-shrink: 0;
+    padding: 30px; 
+    margin-bottom: 30px;
 }
+
+.question_list li {
+    margin-bottom: 15px;
+    
+    /* NEW: Ensures the list item takes up the full width of the container */
+    width: 100%; 
+    
+    /* NEW: Limits the width to prevent stretching */
+    max-width: 100%; 
+    
+    /* NEW: PADDING IS KEY! It creates space inside the bubble so text wraps */
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding doesn't increase total width */
+    
+    /* NEW: Forces long words to break */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
 
 

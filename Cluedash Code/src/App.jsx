@@ -7,7 +7,7 @@ import Instruction from './Instruction/Instruction.jsx'
 import Asset from './Asset/Asset.jsx'
 import Privacy from './Privacy/Privacy.jsx'
 import TOS from './TOS/TOS.jsx'
-import Gamescreen from './GameScreen/Gamescreen.jsx'
+import Gamescreen from './Gamescreen/Gamescreen.jsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {

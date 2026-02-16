@@ -11,11 +11,6 @@
     opacity: 0.5;
 }
 
-/* Note: Body styles cannot be inside a CSS module easily. 
-  Keep active-modal in a global CSS file, or style.css,
-  NOT List.module.css
-*/
-
 .modal, .overlay {
     text-transform: uppercase;
     width: 100vw;
@@ -25,7 +20,7 @@
     right: 0;
     bottom: 0;
     position: fixed;
-    z-index: 1000; /* Added to ensure it sits on top */
+    z-index: 1000; 
 }
 
 .overlay {
@@ -33,33 +28,34 @@
 }
 .modalContent {
     position: absolute;
-    top: 40%;
+    top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
     background: white;
-    opacity: 1;
-    padding: 14px 28px;
-    border-radius: 20px;
+    
+    width: 90%; 
     max-width: 600px;
-    min-width: 300px;
-    color: black; /* Ensure text is visible */
-    z-index: 1001; /* Higher than overlay */
+    height: auto; 
+    max-height: 90vh; 
+    
+    padding: 30px; 
+    border-radius: 20px;
+    color: black;
+    z-index: 1001;
     font-family: "Nunito", sans-serif;
     font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 80%;
-    height: 70%;
-    margin-top: 10vh;
-    max-height: 1100px;
-    text-align: center;
+    
+    overflow-y: auto; 
+    
+    box-sizing: border-box;
 }
 
 .form {
-    min-width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .closeModal {
@@ -76,7 +72,11 @@
 }
 
 .messageField {
-    min-height: 300px;
+    min-height: 150px; 
+    max-height: 200px;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -95,16 +95,19 @@
 
 .inputContainer {
     display: flex;
-    flex-direction: column; /* Stack vertically */
-    gap: 10px; /* Adds space between inputs */
-    min-width: 80%;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; 
+    max-width: 500px; 
+    box-sizing: border-box; 
 }
 
 .inputField {
     padding: 10px;
-    width: 100%; /* Makes inputs fill the container width */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    width: 100%;
+    box-sizing: border-box; 
     border-radius: 10px;
+    border: 1px solid #ccc; 
 }
 
 .sendButton {

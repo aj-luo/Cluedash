@@ -22,21 +22,27 @@ function Gamescreen() {
     //This is used to display the loading icon
     const [loading, setLoading] = useState(false);
 
+    //This is used to get the final answer
+    const [final_answer, setFinalAnswer] = useState('');
+
 
     //Set the className of the container depending on difficulty
-
     let difficulty_class;
     let block_class;
+    let highlight_class;
 
     if (difficulty==="easy") {
         difficulty_class = 'easy_approot'
         block_class = 'easyblock'
+        highlight_class = 'easy'
     } else if (difficulty==="medium") {
         difficulty_class = 'medium_approot'
         block_class = 'mediumblock'
+        highlight_class = 'medium'
     } else {
         difficulty_class = 'hard_approot'
         block_class = 'hardblock'
+        highlight_class = 'hard'
     }
 
 
@@ -47,14 +53,14 @@ function Gamescreen() {
                 <h1>GUESS THE WORD! THINK HARD!</h1>
                 <input className={styles.input} placeholder='Type your question here' value={currentQuestion}
                         onChange={(e) => setcurrentQuestion(e.target.value)}></input>
-
-                <button className={styles.submitButton} onClick={handleGuessSubmit}>{loading ? (
+                
+                <button className={`${styles.submitButton} ${styles[highlight_class]}`} onClick={handleGuessSubmit}>{loading ? (
                     <img src={loading_image} alt="Loading..." style={{ height: '20px' }} />
                     ) : (
                         'SUBMIT!'
                     )}</button>
 
-                <button className={styles.forfeitButton} onClick={handleForfeit}>GIVE UP</button>
+                <button className={`${styles.forfeitButton} ${styles[highlight_class]}`} onClick={handleForfeit}>GIVE UP</button>
 
                 <div className={styles.row_three}>
                     <div className={styles.questionlist}>
@@ -82,16 +88,16 @@ function Gamescreen() {
     const renderWon = () => <div className={styles.question}>
                 <h1>Congrats, you guessed correctly!</h1>
                 <StartButton difficulty={difficulty}/>
-                <Link to="/en" className={styles.homeButton}>
+                <Link to="/en" className={`${styles.homeButton} ${styles[highlight_class]}`}>
                     <img src={HomeIcon} alt="Home" />
                 </Link> 
             </div>;
 
     const renderLost = () => <div className={styles.question}>
                 <h1>You Lost!</h1>
-                <p>The answer was: </p>
+                <p>The answer was: {final_answer}</p>
                 <StartButton className={styles.startbutton} difficulty={difficulty}/>
-                <Link to="/en" className={styles.homeButton}>
+                <Link to="/en" className={`${styles.homeButton} ${styles[highlight_class]}`}>
                     <img src={HomeIcon} alt="Home" />
                 </Link>
             </div>;
@@ -122,12 +128,35 @@ function Gamescreen() {
         fetchGameData();
     }, [gameId])
 
+
+
+    //helper to get the final answer, once the user loses to display to them
+    const handleGetAnswer = async () => {
+        try {
+            //we call the api with difficulty and number of guesses
+            const response = await fetch(`/api/getfinalanswer/${gameId}`);
+            const data = await response.json();
+
+            //get the info from backend
+            const final_answer = data.final_answer
+
+            // lets update final_answer if the status is lost
+            setFinalAnswer(final_answer)
+
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
     //helper to add questions to array we display and to send the question to backend to process
     const handleGuessSubmit = async () => {
 
         setLoading(true);
 
-        if (currentQuestion.trim() === "") return;
+        if (currentQuestion.trim() === "") {
+            setLoading(false);
+            return
+        }
 
         //lets get our answer, remaining_questions, and game_status
         try {
@@ -152,6 +181,11 @@ function Gamescreen() {
             //2. Second lets update the current status as well
             setStatus(game_status)
 
+            //3. If status is lost, then we update the answer
+            if (game_status === 'lost') {
+                handleGetAnswer()
+            }
+
             setQuestions(prevQuestions => [...prevQuestions, [currentQuestion, answer]])
             setcurrentQuestion("");
 
@@ -171,6 +205,7 @@ function Gamescreen() {
             // Check if the request was successful
             if (response.ok) {
                 setStatus('lost');
+                handleGetAnswer()
             } else {
                 console.error("Failed to update status on server");
             }
@@ -187,8 +222,6 @@ function Gamescreen() {
                 {status === 'won' && renderWon()}
                 {status === 'lost' && renderLost()}
                 </div>
-
-                
             </div>
         </div>
     )
