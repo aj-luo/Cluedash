@@ -46,7 +46,6 @@ function List() {
         {modal && (
         // 3. Changed class names to use the 'styles' object
         <div className={styles.modal}>
-          <div className={styles.overlay}></div>
           <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <h2>Contact Us</h2>
             <form className={styles.form} action="https://formspree.io/f/xaqdyelz" method="POST">
