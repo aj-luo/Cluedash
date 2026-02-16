@@ -89,7 +89,7 @@ function Gamescreen() {
                 <h1>Congrats, you guessed correctly!</h1>
                 <StartButton difficulty={difficulty}/>
                 <Link to="/en" className={`${styles.homeButton} ${styles[highlight_class]}`}>
-                    <img src={HomeIcon} alt="Home" />
+                    <img className={styles.shadowed_image} src={HomeIcon} alt="Home" />
                 </Link> 
             </div>;
 
@@ -98,7 +98,7 @@ function Gamescreen() {
                 <p>The answer was: {final_answer}</p>
                 <StartButton className={styles.startbutton} difficulty={difficulty}/>
                 <Link to="/en" className={`${styles.homeButton} ${styles[highlight_class]}`}>
-                    <img src={HomeIcon} alt="Home" />
+                    <img className={styles.shadowed_image} src={HomeIcon} alt="Home" />
                 </Link>
             </div>;
 

@@ -17,12 +17,12 @@ function Asset() {
                     </div>
                     <div className={styles.asset1}>
                         <h2>Asset 1: ClueDash wallpaper (png file)</h2>
-                        <img className={styles.monogram}width="300" height="200" src={monogram}></img>
+                        <img className={styles.monogram} src={monogram} alt="wallpaper" />
                         <a href={monogram} download><button className={styles.downloadButton}><img src={download} width="30" height="30"></img></button></a>
                     </div>
                     <div className={styles.asset2}>
                         <h2>Asset 2: ClueDash logo (.lottie file)</h2>
-                        <img className={styles.logo}width="500" height="200" src={logo}></img>
+                        <img className={styles.logo} src={logo} alt="logo" />
                         <a href={"/logo.lottie"} download><button className={styles.downloadButton}><img src={download} width="30" height="30"></img></button></a>
                     </div>
                 </div>

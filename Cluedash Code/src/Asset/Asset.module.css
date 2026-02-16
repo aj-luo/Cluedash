@@ -2,20 +2,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;       
+    position: relative;        
     min-height: 100vh;
     background-color: #0F172A; 
 }
 
 .approot::before {
-    content: "";                       
+    content: "";                    
     position: absolute;
-    inset: 0;                           
+    inset: 0;                       
     background-image: url(../assets/background_monogram.png);
     background-repeat: repeat;
     background-size: 800px 600px;
-    opacity: 0.25;                    
-    pointer-events: none;                                   
+    opacity: 0.25;                  
+    pointer-events: none;                           
 }
 
 .approot > * {
@@ -27,6 +27,8 @@
     background-color: #0F172A;
     width: 60vw;
     height: 80vh;
+    min-height: 600px; 
+    max-height: 800px; 
     margin: 0 auto;
     border: 6px rgba(3, 3, 3, 0.15) solid;
     border-radius: 20px;
@@ -34,13 +36,12 @@
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
     min-width: 300px;
     max-width: 2000px;
-    max-height: 1200px;
-    min-height: 600px;
 }
 
 .container {
     display: grid;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.1fr;
+    /* Slightly adjusted rows to give more room to assets */
+    grid-template-rows: 1fr 1fr 1fr 0.1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     height: 100%;
@@ -70,11 +71,6 @@
     grid-row-end: 3;
 }
 
-.monogram {
-    border: 3px rgba(255, 255, 255, 0.15) solid;
-    border-radius: 20px;
-}
-
 .asset2 {
     grid-column-start: 2;
     grid-column-end: 5;
@@ -91,8 +87,27 @@
     border-radius: 20px;
     box-sizing: border-box;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
-    padding: 20px;
+    padding: 10px; /* Reduced padding for more room */
+    overflow: hidden; /* Clips content to prevent leakage */
+    min-height: 0;    /* Allows flex container to shrink */
 }
+
+.asset1 h2, .asset2 h2 {
+    font-size: 1.2rem; /* Ensure text fits */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.monogram, .logo {
+    border: 3px rgba(255, 255, 255, 0.15) solid;
+    border-radius: 20px;
+    max-width: 100%;
+    /* Reduced max-height to leave room for text */
+    max-height: 80px; 
+    height: auto;
+    object-fit: contain; 
+}
+
 .homeButton {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -101,6 +116,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .Buttons {
@@ -126,20 +142,21 @@
 }
 
 .downloadButton {
-    margin-top: 20px;
-    width: 80px;
-    height: 60px;
-    border-radius: 20px;
+    margin-top: 10px;
+    width: 60px;
+    height: 40px;
+    border-radius: 15px;
     background-color: #0F172A;
-    border: 6px rgba(3, 3, 3, 0.15) solid;
-    border-radius: 20px;
+    border: 3px rgba(3, 3, 3, 0.15) solid;
     box-sizing: border-box;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
     transition: background-color 0.3s ease;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .downloadButton:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-

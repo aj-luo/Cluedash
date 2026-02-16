@@ -1,8 +1,19 @@
+.intro {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    color: grey;
+    font-size: large;
+}
+
 .card_container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    height: 100%; 
 }
 
 .easycard {

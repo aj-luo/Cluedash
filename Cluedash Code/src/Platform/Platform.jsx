@@ -17,9 +17,8 @@ function Platform({type}) {
                     loop
                     autoplay/>
                 </div>
-                <div className={styles.item_2}><User isLoggedIn={false} name="Albert"/></div>
                 <div className={styles.item_3}><Card /></div>
-                <div className={styles.item_4}><Footer /></div>
+                <div className={styles.item_4}><Footer className={styles.footer}/></div>
                 <div className={styles.item_5}><a href='https://www.linkedin.com/company/half-dome-studios' target="_blank"><img className={styles.logo} src={Logo} alt="Half-Dome Studios Logo" /></a></div>
             </div>
         </div>

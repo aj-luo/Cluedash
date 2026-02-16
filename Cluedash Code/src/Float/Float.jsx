@@ -42,10 +42,8 @@ let button_color;
                 <ul>
                     <li>Guess the object in {guesses} questions!</li>
                     <li>Your questions must be a yes/no question!</li>
-                    <li>You are allowed unlimited guesses before last question!</li>
+                    <li>If your question is ambiguous, then the response will give you an explanation!</li>
                     <li>If you dont get the answer after {guesses} questions, you lose!</li>
-                    <li>There is one final guess after last question!</li>
-                    <li>If you are ready, press start below!</li>
                 </ul>
             </div>
             <div className={styles.startButton}>

@@ -47,6 +47,8 @@ function Card() {
       };
 
     return (
+      <>
+        <h2 className={styles.intro}> WELCOME GUEST! CHOOSE DIFFICULTY</h2>
         <div className={styles.card_container}>
             <Link to="/easy" className={styles.cardLink}>
             <div className={`${styles.easycard} ${styles.card}`} onMouseEnter={() => playHoverSound(hoverEasy)}
@@ -73,6 +75,7 @@ function Card() {
             </div>
             </Link>
         </div>
+      </>
       );
 }
 

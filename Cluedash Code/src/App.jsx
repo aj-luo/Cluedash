@@ -8,23 +8,47 @@ import Asset from './Asset/Asset.jsx'
 import Privacy from './Privacy/Privacy.jsx'
 import TOS from './TOS/TOS.jsx'
 import Gamescreen from './Gamescreen/Gamescreen.jsx'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
+import { AnimatePresence, motion } from 'framer-motion'
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+  <AnimatePresence mode="wait">
+    <Routes location={location} key={location.pathname}>
+      <Route path="/en" element={<PageWrapper><Mainbody /></PageWrapper>} />
+      <Route path="/fr" element={<PageWrapper><MainbodyFrench /></PageWrapper>} />
+      <Route path="/easy" element={<PageWrapper><Easy /></PageWrapper>} />
+      <Route path="/medium" element={<PageWrapper><Medium /></PageWrapper>} />
+      <Route path="/hard" element={<PageWrapper><Hard /></PageWrapper>} />
+      <Route path="/privacy" element={<PageWrapper><Privacy /></PageWrapper>} />
+      <Route path="/terms-of-service" element={<PageWrapper><TOS /></PageWrapper>} />
+      <Route path="/instructions" element={<PageWrapper><Instruction /></PageWrapper>} />
+      <Route path="/assets" element={<PageWrapper><Asset /></PageWrapper>} />
+      <Route path="/game/:difficulty/:gameId" element={<PageWrapper><Gamescreen /></PageWrapper>}></Route>
+    </Routes>
+  </AnimatePresence>
+  )
+}
+
+function PageWrapper({children}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
+        {children}
+    </motion.div>
+  )
+}
 
 function App() {
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path="/en" element={<Mainbody />} />
-          <Route path="/fr" element={<MainbodyFrench />} />
-          <Route path="/easy" element={<Easy />} />
-          <Route path="/medium" element={<Medium />} />
-          <Route path="/hard" element={<Hard />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms-of-service" element={<TOS />} />
-          <Route path="/instructions" element={<Instruction />} />
-          <Route path="/assets" element={<Asset />} />
-          <Route path="/game/:difficulty/:gameId" element={<Gamescreen />}></Route>
-        </Routes>
+        <AnimatedRoutes />
     </BrowserRouter>
   )
 }
