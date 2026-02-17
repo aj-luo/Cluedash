@@ -11,17 +11,19 @@ function Gamescreen() {
     //This is the game id we have to pass to the backend api everytime we make a guess
     const { difficulty, gameId } = useParams();
 
+    const [questions, setQuestions] = useState(() => {
+        const savedQuestions = localStorage.getItem(`gameQuestions_${gameId}`);
+        return savedQuestions ? JSON.parse(savedQuestions) : [];
+    });
+
     //sets the questions in an array to display to user
     const [currentQuestion, setcurrentQuestion] = useState("");
-    const [questions, setQuestions] = useState([]);
+
     const [numQuestions, setNumQuestions] = useState(0);
-    
     //set the current status of the game, can be one of these 3: active, won, lost
     const [status, setStatus] = useState('active');
-
     //This is used to display the loading icon
     const [loading, setLoading] = useState(false);
-
     //This is used to get the final answer
     const [final_answer, setFinalAnswer] = useState('');
 
@@ -44,6 +46,12 @@ function Gamescreen() {
         block_class = 'hardblock'
         highlight_class = 'hard'
     }
+
+
+    // Sync questions to localStorage whenever they change
+    useEffect(() => {
+        localStorage.setItem(`gameQuestions_${gameId}`, JSON.stringify(questions));
+    }, [questions, gameId]);
 
 
     //We render these depending on what state we are in
@@ -107,10 +115,12 @@ function Gamescreen() {
         const fetchGameData = async () => {
             try {
 
-                setQuestions([]);       // Clear old questions
-                setNumQuestions(0);     // Reset count
-                setStatus('active');    // Set status to active
-                setcurrentQuestion(""); // Clear input
+                if (questions.length === 0) {
+                    setQuestions([]);
+                    setNumQuestions(0);
+                    setStatus('active');
+                    setcurrentQuestion("");
+                }
 
                 // Call backend to get details about this gameId
                 const response = await fetch(`/api/getgamedata/${gameId}`);
@@ -118,6 +128,7 @@ function Gamescreen() {
                 
                 //set the number of initial questions
                 setNumQuestions(data.remaining_questions);
+                setStatus(data.status);
 
             } catch (error) {
                 console.error("Error fetching game:", error);
