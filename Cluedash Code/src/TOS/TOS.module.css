@@ -41,7 +41,7 @@
 .container {
     display: grid;
     grid-template-rows: 0.3fr 1fr 0.2fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     height: 100%;
     width: 100%;
 }
@@ -58,6 +58,10 @@
     color: white;
     text-align: center;
     font-family: "Nunito", sans-serif;
+}
+
+.title h1 {
+    font-size: 2.5rem;
 }
 
 .content {
@@ -87,9 +91,9 @@
 }
 
 .Buttons {
-    height: 110px;
-    width: 150px;
-    padding: 15px;
+    height: 6rem;
+    width: 8rem;
+    padding: 1rem;
     border-radius: 20px;
     background-color: #0F172A;
     border: 3px rgba(3, 3, 3, 0.15) solid;
@@ -99,7 +103,7 @@
     color: white;
     font-family: "Nunito", sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }

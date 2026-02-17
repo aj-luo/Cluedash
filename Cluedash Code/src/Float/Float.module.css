@@ -6,33 +6,43 @@
     border-radius: 20px;
     box-sizing: border-box;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
-    min-width: 400px;
-    max-width: 2000px;
-    max-height: 1200px;
-    min-height: 800px;
+    min-width: 300px;
+    max-width: 1200px;
+    max-height: 800px;
+    min-height: 500px;
+    
+    /* FIX: Allows internal scrolling */
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* FIX: Title, Content, Button */
+    grid-template-rows: auto 1fr auto; 
     grid-template-columns: 1fr;
     height: 100%;
     width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .title_text {
     color: white;
     font-weight: bold;
     font-family: "Nunito", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem; /* FIX: Using rem */
     font-weight: 900;
     text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
+    margin: 0;
 }
 
 .content {
@@ -42,101 +52,65 @@
     color: white;
     font-weight: bold;
     font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    font-size: 40px;
-    gap: 12px;
-    justify-self: center;
+    font-size: 1.2rem; /* FIX: Using rem */
+    
+    /* FIX: Removed large margin */
+    margin: 10px auto; 
+    width: 90%;
+    max-width: 800px;
+    
     border: 4px rgba(3, 3, 3, 0.15) solid;
     border-radius: 20px;
     box-sizing: border-box;
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
     padding: 20px;
-    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
+    
+    /* FIX: Internal scrolling for long text */
+    overflow-y: auto; 
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.content ul {
+    margin: 0;
+    padding-left: 20px;
 }
 
-.easybutton {
-    height: 80px;
-    width: 250px;
-    border: 3px rgba(3, 3, 3, 0.15) solid;
-    border-radius: 30px;
-    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
-    background-color: hsl(108, 80%, 67%);
-    color: white;
-    font-weight: bold;
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    font-size: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
-}
-
-.easybutton:hover {
-    background-color: hsl(108, 52%, 48%);
-}
-
-.mediumbutton {
-    height: 80px;
-    width: 250px;
-    border: 3px rgba(3, 3, 3, 0.15) solid;
-    border-radius: 30px;
-    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
-    background-color: hsl(61, 100%, 71%);
-    color: white;
-    font-weight: bold;
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    font-size: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
-}
-
-.mediumbutton:hover {
-    background-color: hsl(61, 58%, 47%);
-}
-
-.hardbutton {
-    height: 80px;
-    width: 250px;
-    border: 3px rgba(3, 3, 3, 0.15) solid;
-    border-radius: 30px;
-    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
-    background-color: hsl(0, 98%, 63%);
-    color: white;
-    font-weight: bold;
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    font-size: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-shadow: rgba(3, 3, 3, 0.15) 3px 0px 0px, rgba(3, 3, 3, 0.15) 2.83487px .981584px 0px, rgba(3, 3, 3, 0.15) 2.35766px 1.85511px 0px, rgba(3, 3, 3, 0.15) 1.62091px 2.52441px 0px, rgba(3, 3, 3, 0.15) .705713px 2.91581px 0px, rgba(3, 3, 3, 0.15) -.287171px 2.98622px 0px, rgba(3, 3, 3, 0.15) -1.24844px 2.72789px 0px, rgba(3, 3, 3, 0.15) -2.07227px 2.16926px 0px, rgba(3, 3, 3, 0.15) -2.66798px 1.37182px 0px, rgba(3, 3, 3, 0.15) -2.96998px .42336px 0px, rgba(3, 3, 3, 0.15) -2.94502px -.571704px 0px, rgba(3, 3, 3, 0.15) -2.59586px -1.50383px 0px, rgba(3, 3, 3, 0.15) -1.96093px -2.27041px 0px, rgba(3, 3, 3, 0.15) -1.11013px -2.78704px 0px, rgba(3, 3, 3, 0.15) -.137119px -2.99686px 0px, rgba(3, 3, 3, 0.15) .850987px -2.87677px 0px, rgba(3, 3, 3, 0.15) 1.74541px -2.43999px 0px, rgba(3, 3, 3, 0.15) 2.44769px -1.73459px 0px, rgba(3, 3, 3, 0.15) 2.88051px -.838247px 0px;
-}
-
-.hardbutton:hover {
-    background-color: rgba(177, 29, 29, 0.774);
-}
-
-.easy {
-    background-color: hsl(108, 80%, 67%);
-}
-
-.medium {
-    background-color: hsl(61, 100%, 71%);
-}
-
-.hard {
-    background-color: hsl(0, 98%, 63%);
+.content li {
+    margin-bottom: 10px;
 }
 
 .startButton {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
 }
+
+/* Button styles */
+.easybutton, .mediumbutton, .hardbutton {
+    height: 80px;
+    width: 250px;
+    border: 3px rgba(3, 3, 3, 0.15) solid;
+    border-radius: 30px;
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, .15), 0px 3px 0px 0px rgba(255, 255, 255, .15);
+    color: white;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.easybutton { background-color: hsl(108, 80%, 67%); }
+.easybutton:hover { background-color: hsl(108, 52%, 48%); }
+
+.mediumbutton { background-color: hsl(61, 100%, 71%); }
+.mediumbutton:hover { background-color: hsl(61, 58%, 47%); }
+
+.hardbutton { background-color: hsl(0, 98%, 63%); }
+.hardbutton:hover { background-color: rgba(177, 29, 29, 0.774); }
+
+/* Difficulty background colors */
+.easy { background-color: hsl(108, 80%, 67%); }
+.medium { background-color: hsl(61, 100%, 71%); }
+.hard { background-color: hsl(0, 98%, 63%); }

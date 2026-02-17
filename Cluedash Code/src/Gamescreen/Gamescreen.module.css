@@ -304,6 +304,7 @@
     /*sets a fixed height (from previous step) */
     height: 300px;
     overflow-y: auto;
+    margin-top: 40px;
 }
 
 .question_list {
@@ -337,6 +338,10 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
+}
+
+.shadowed_image {
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.75));
 }
 
 
