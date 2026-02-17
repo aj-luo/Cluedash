@@ -130,6 +130,10 @@ function Gamescreen() {
                 setNumQuestions(data.remaining_questions);
                 setStatus(data.status);
 
+                if (data.status === 'lost') {
+                    handleGetAnswer()
+                }
+
             } catch (error) {
                 console.error("Error fetching game:", error);
             }
