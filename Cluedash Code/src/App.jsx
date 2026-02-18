@@ -17,7 +17,7 @@ function AnimatedRoutes() {
   return (
   <AnimatePresence mode="wait">
     <Routes location={location} key={location.pathname}>
-      <Route path="/en" element={<PageWrapper><Mainbody /></PageWrapper>} />
+      <Route path="/" element={<PageWrapper><Mainbody /></PageWrapper>} />
       <Route path="/fr" element={<PageWrapper><MainbodyFrench /></PageWrapper>} />
       <Route path="/easy" element={<PageWrapper><Easy /></PageWrapper>} />
       <Route path="/medium" element={<PageWrapper><Medium /></PageWrapper>} />
