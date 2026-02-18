@@ -7,7 +7,7 @@ function Privacy() {
         <div className= {styles.approot}>
             <div className={styles.block}>
                 <div className={styles.container}>
-                    <div className={styles.homeButton}><Link to="/en"><button className={styles.Buttons}><img src={home} width="30" height="30"></img> <h4>Home</h4> </button></Link></div>
+                    <div className={styles.homeButton}><Link to="/"><button className={styles.Buttons}><img src={home} width="30" height="30"></img> <h4>Home</h4> </button></Link></div>
                     <div className={styles.title}>
                         <h1>Privacy Policy</h1>
                     </div>
