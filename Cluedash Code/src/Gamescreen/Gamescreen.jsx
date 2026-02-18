@@ -6,6 +6,8 @@ import StartButton from '../StartButton/StartButton';
 import HomeIcon from '../assets/home.png';
 import { Link } from "react-router-dom";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
+
 function Gamescreen() {
 
     //This is the game id we have to pass to the backend api everytime we make a guess
@@ -123,7 +125,7 @@ function Gamescreen() {
                 }
 
                 // Call backend to get details about this gameId
-                const response = await fetch(`/api/getgamedata/${gameId}`);
+                const response = await fetch(`${API_BASE_URL}/api/getgamedata/${gameId}`);
                 const data = await response.json();
                 
                 //set the number of initial questions
@@ -149,7 +151,7 @@ function Gamescreen() {
     const handleGetAnswer = async () => {
         try {
             //we call the api with difficulty and number of guesses
-            const response = await fetch(`/api/getfinalanswer/${gameId}`);
+            const response = await fetch(`${API_BASE_URL}/api/getfinalanswer/${gameId}`);
             const data = await response.json();
 
             //get the info from backend
@@ -176,7 +178,7 @@ function Gamescreen() {
         //lets get our answer, remaining_questions, and game_status
         try {
             //we call the api with difficulty and number of guesses
-            const response = await fetch(`/api/askquestion/${gameId}`, {
+            const response = await fetch(`${API_BASE_URL}/api/askquestion/${gameId}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -215,7 +217,7 @@ function Gamescreen() {
         try {
             // Call backend to update the status
             console.log(gameId)
-            const response = await fetch(`/api/forfeit/${gameId}`, {
+            const response = await fetch(`${API_BASE_URL}/api/forfeit/${gameId}`, {
                 method: 'PUT'}) 
             // Check if the request was successful
             if (response.ok) {
