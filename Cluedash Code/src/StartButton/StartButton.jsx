@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Startbutton.module.css';
 
+//the aws backend
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
+
 function StartButton({ difficulty }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
@@ -26,7 +29,7 @@ function StartButton({ difficulty }) {
 
         try {
             //we call the api with difficulty and number of guesses
-            const response = await fetch('/api/startgame', {
+            const response = await fetch(`${API_BASE_URL}/api/startgame`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({
