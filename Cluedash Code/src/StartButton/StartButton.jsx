@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Startbutton.module.css';
 
 //the aws backend
-const API_BASE_URL = import.meta.env.VITE_API_URL;
+const API_BASE_URL = import.meta.env.NEXT_PUBLIC_API_URL;
 
 function StartButton({ difficulty }) {
     const navigate = useNavigate();
