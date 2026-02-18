@@ -96,7 +96,7 @@ function Gamescreen() {
     const renderWon = () => <div className={styles.question}>
                 <h1>Congrats, you guessed correctly!</h1>
                 <StartButton difficulty={difficulty}/>
-                <Link to="/en" className={`${styles.homeButton} ${styles[highlight_class]}`}>
+                <Link to="/" className={`${styles.homeButton} ${styles[highlight_class]}`}>
                     <img className={styles.shadowed_image} src={HomeIcon} alt="Home" />
                 </Link> 
             </div>;
@@ -105,7 +105,7 @@ function Gamescreen() {
                 <h1>You Lost!</h1>
                 <p>The answer was: {final_answer}</p>
                 <StartButton className={styles.startbutton} difficulty={difficulty}/>
-                <Link to="/en" className={`${styles.homeButton} ${styles[highlight_class]}`}>
+                <Link to="/" className={`${styles.homeButton} ${styles[highlight_class]}`}>
                     <img className={styles.shadowed_image} src={HomeIcon} alt="Home" />
                 </Link>
             </div>;
