@@ -6,8 +6,6 @@ import StartButton from '../StartButton/StartButton';
 import HomeIcon from '../assets/home.png';
 import { Link } from "react-router-dom";
 
-const API_BASE_URL = import.meta.env.NEXT_PUBLIC_API_URL;
-
 function Gamescreen() {
 
     //This is the game id we have to pass to the backend api everytime we make a guess
