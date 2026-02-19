@@ -1,17 +1,13 @@
 import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
+// Add 'export' directly before the variable declarations
+export const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
+  process.env.SUPABASE_ANON_KEY // Check your env name! Standard is ANON_KEY
 );
 
-const words = createClient(
+export const words = createClient(
   process.env.SUPABASE_WORDS_URL,
   process.env.SUPABASE_WORDS_KEY
 );
-
-module.exports = {
-  supabase,
-  words
-};
