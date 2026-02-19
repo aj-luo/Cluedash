@@ -29,7 +29,7 @@ function StartButton({ difficulty }) {
 
         try {
             //we call the api with difficulty and number of guesses
-            const response = await fetch(`https://3i8ztttxmf.execute-api.us-east-2.amazonaws.com/prod/api/startgame`, {
+            const response = await fetch(`/api/startgame`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({
