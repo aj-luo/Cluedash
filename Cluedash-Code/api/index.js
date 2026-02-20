@@ -15,10 +15,6 @@ const model = genAI.getGenerativeModel({
     systemInstruction: `Respond with "Yes", "No", nothing more. If this is not a yes or no question, say "not a proper yes/no question". If the question is a bit ambiguous, not yes or no, explain why saying "This is ambiguous: " along with the reason in 1 short sentence, DO NOT DO NOT mention the answer at all, at all in your response!!! If the user guesses the answer correctly, then respond "Correct". Also if the guess is close enough (almost synonymous) you can also reply "Correct"`
 });
 
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
-})
-
 //Middleware, tells express to parse incoming data from frontend, otherwise req.body will be undefined
 app.use(express.json());
 
