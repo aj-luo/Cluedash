@@ -9,7 +9,7 @@ const app = express()
 //CORS middleware
 app.use(cors());
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 const model = genAI.getGenerativeModel({ 
     model: "gemini-1.5-flash-8b",
     systemInstruction: `Respond with "Yes", "No", nothing more. If this is not a yes or no question, say "not a proper yes/no question". If the question is a bit ambiguous, not yes or no, explain why saying "This is ambiguous: " along with the reason in 1 short sentence, DO NOT DO NOT mention the answer at all, at all in your response!!! If the user guesses the answer correctly, then respond "Correct". Also if the guess is close enough (almost synonymous) you can also reply "Correct"`
@@ -45,11 +45,15 @@ async function fetchWord() {
 //helper to get the answer from the ai api
 async function fetchAnswerFromAI(question) {
     const result = await model.generateContent(question);
-    
     const response = await result.response;
-    const text = response.text();
 
-    return text.trim();
+    // Safety check: if the model blocked the response, text() throws an error.
+    try {
+        return response.text().trim();
+    } catch (e) {
+        console.error("AI response was blocked or empty:", e);
+        return "This question cannot be answered for safety reasons.";
+    }
 }
 
 //This initializes the game (when you click 'start game' or 'play again'), in the DB the game session starts and we pass the difficulty and # of questions allowed
@@ -121,7 +125,7 @@ app.post('/api/askquestion/:id', async (req, res) => {
         const api_response = await fetchAnswerFromAI(question_send)
 
         //boolean to check if the response is Correct
-        const won = (api_response === "Correct")
+        const won = api_response.toLowerCase().includes("correct");
 
         //if won is true, then change the status
         if (won) {
