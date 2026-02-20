@@ -3,10 +3,17 @@ import express from 'express';
 import cors from 'cors';
 import OpenAI from "openai";
 import { supabase, words } from './db.js';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const app = express()
 //CORS middleware
 app.use(cors());
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ 
+    model: "gemini-1.5-flash-8b",
+    systemInstruction: `Respond with "Yes", "No", nothing more. If this is not a yes or no question, say "not a proper yes/no question". If the question is a bit ambiguous, not yes or no, explain why saying "This is ambiguous: " along with the reason in 1 short sentence, DO NOT DO NOT mention the answer at all, at all in your response!!! If the user guesses the answer correctly, then respond "Correct". Also if the guess is close enough (almost synonymous) you can also reply "Correct"`
+});
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
@@ -37,11 +44,12 @@ async function fetchWord() {
 
 //helper to get the answer from the ai api
 async function fetchAnswerFromAI(question) {
-    const response = await openai.responses.create({
-        model: "gpt-5-mini",
-        input: question
-    })
-    return response.output_text.trim();
+    const result = await model.generateContent(question);
+    
+    const response = await result.response;
+    const text = response.text();
+
+    return text.trim();
 }
 
 //This initializes the game (when you click 'start game' or 'play again'), in the DB the game session starts and we pass the difficulty and # of questions allowed
@@ -106,8 +114,7 @@ app.post('/api/askquestion/:id', async (req, res) => {
     let final_answer = '';
     
     //The prompt to send to the AI
-    const question_send = `The user of a game asked "${question}", the word/answer is "${answer}", can you answer "Yes", "No", nothing more. If this is not a yes or no question, say "not a proper yes/no question". If the question is a bit ambiguous, not yes or no, explain why saying "This is ambiguous: " along with the reason, DO NOT DO NOT mention the answer at all, at all in your response!!! If the user guesses the answer correctly, then respond "Correct". Also if the guess is close enough (almost synonymous) you can also reply "Correct""`
-
+    const question_send = `The user of a game asked "${question}", the word/answer is "${answer}"`
 
     try {
         //Send question/prompt to the AI
